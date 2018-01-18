@@ -1,0 +1,8 @@
+ <!DOCTYPE RCC><RCC version="1.0">
+ <qresource>
+     <file>resourse/Soccer_ball.png</file>
+     <file>resourse/aqua_ball.png</file>
+     <file>resourse/basketball.png</file>
+     <file>resourse/ball.svg</file>
+ </qresource>
+ </RCC>
