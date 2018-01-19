@@ -114,6 +114,11 @@ void line_segment_object::paint (QPainter *painter) const
   painter->drawLine (m_line);
 }
 
+bool line_segment_object::check_visibility (double bottom) const
+{
+  return !(m_line.y1 () < bottom && m_line.y2 () < bottom);
+}
+
 void line_segment_object::set_line (QLineF line)
 {
   m_line = line;

@@ -20,4 +20,5 @@ public:
 
   virtual rebound_data intersect_with_trajectory_of_ball (const ball_data_gui &ball) const = 0;
   virtual void paint (QPainter *painter) const = 0;
+  virtual bool check_visibility (double bottom) const = 0;
 };

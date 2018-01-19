@@ -5,6 +5,8 @@
 #include "src/gui/line_segment_object.h"
 #include "src/kernel/future_cpp_features.h"
 
+#include <algorithm>
+
 geometry_data_gui::geometry_data_gui ()
 {
   create_default_ball ();
@@ -68,6 +70,14 @@ void geometry_data_gui::clear_all_objects ()
 {
   m_geom_objects.clear ();
   create_default_ball ();
+}
+
+void geometry_data_gui::delete_not_visibility_objects (double bottom)
+{
+  m_geom_objects.erase (std::remove_if (m_geom_objects.begin (), m_geom_objects.end (),
+                                        [bottom] (const std::unique_ptr<abstract_geom_object> &obj) {
+      return !obj->check_visibility (bottom);
+    }), m_geom_objects.end ());
 }
 
 geometry_data_gui::~geometry_data_gui () = default;

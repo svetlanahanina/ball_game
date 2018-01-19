@@ -19,6 +19,7 @@ public:
 
   virtual rebound_data intersect_with_trajectory_of_ball (const ball_data_gui &ball) const override;
   virtual void paint (QPainter *painter) const override;
+  virtual bool check_visibility (double bottom) const override;
 
   void set_line (QLineF line);
   void set_push_force (double push_force);
