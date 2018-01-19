@@ -65,6 +65,7 @@ void game_process_view::update_time ()
     {
       m_max_y = m_geom_data->get_ball ()->get_pos ().y ();
       m_bottom = m_max_y - 0.5 * m_height;
+      m_geom_data->delete_not_visibility_objects (m_bottom);
     }
 
   if (return_ball_in_bounds ())

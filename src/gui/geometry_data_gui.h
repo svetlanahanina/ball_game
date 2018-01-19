@@ -31,4 +31,6 @@ public:
   void paint_all_objects (QPainter *painter) const;
 
   void clear_all_objects ();
+
+  void delete_not_visibility_objects (double bottom);
 };

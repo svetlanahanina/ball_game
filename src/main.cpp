@@ -6,6 +6,7 @@
 #include "src/gui/geometry_data_gui.h"
 #include "src/gui/game_process_view.h"
 
+//Test commit changes
 int main (int argc, char *argv[])
 {
   QApplication app (argc, argv);
